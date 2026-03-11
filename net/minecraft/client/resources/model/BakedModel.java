@@ -1,0 +1,35 @@
+package net.minecraft.client.resources.model;
+
+import java.util.List;
+import javax.annotation.Nullable;
+import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.block.model.ItemOverrides;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.state.BlockState;
+
+public interface BakedModel {
+  List<BakedQuad> getQuads(@Nullable BlockState paramBlockState, @Nullable Direction paramDirection, RandomSource paramRandomSource);
+  
+  boolean useAmbientOcclusion();
+  
+  boolean isGui3d();
+  
+  boolean usesBlockLight();
+  
+  boolean isCustomRenderer();
+  
+  TextureAtlasSprite getParticleIcon();
+  
+  ItemTransforms getTransforms();
+  
+  ItemOverrides getOverrides();
+}
+
+
+/* Location:              C:\Users\Xiao\Downloads\output\client_deobfuscated.jar!\net\minecraft\client\resources\model\BakedModel.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

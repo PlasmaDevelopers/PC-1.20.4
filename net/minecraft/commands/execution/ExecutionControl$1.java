@@ -1,0 +1,45 @@
+/*    */ package net.minecraft.commands.execution;
+/*    */ 
+/*    */ import javax.annotation.Nullable;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ class null
+/*    */   implements ExecutionControl<T>
+/*    */ {
+/*    */   public void queueNext(EntryAction<T> $$0) {
+/* 21 */     context.queueNext(new CommandQueueEntry<>(frame, $$0));
+/*    */   }
+/*    */ 
+/*    */   
+/*    */   public void tracer(@Nullable TraceCallbacks $$0) {
+/* 26 */     context.tracer($$0);
+/*    */   }
+/*    */ 
+/*    */   
+/*    */   @Nullable
+/*    */   public TraceCallbacks tracer() {
+/* 32 */     return context.tracer();
+/*    */   }
+/*    */ 
+/*    */   
+/*    */   public Frame currentFrame() {
+/* 37 */     return frame;
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\Xiao\Downloads\output\client_deobfuscated.jar!\net\minecraft\commands\execution\ExecutionControl$1.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

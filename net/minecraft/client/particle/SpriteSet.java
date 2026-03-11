@@ -1,0 +1,16 @@
+package net.minecraft.client.particle;
+
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.util.RandomSource;
+
+public interface SpriteSet {
+  TextureAtlasSprite get(int paramInt1, int paramInt2);
+  
+  TextureAtlasSprite get(RandomSource paramRandomSource);
+}
+
+
+/* Location:              C:\Users\Xiao\Downloads\output\client_deobfuscated.jar!\net\minecraft\client\particle\SpriteSet.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

@@ -1,0 +1,37 @@
+/*    */ package net.minecraft.client.renderer.entity;
+/*    */ import com.mojang.blaze3d.vertex.PoseStack;
+/*    */ import net.minecraft.client.model.IllagerModel;
+/*    */ import net.minecraft.client.renderer.ItemInHandRenderer;
+/*    */ import net.minecraft.client.renderer.MultiBufferSource;
+/*    */ import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
+/*    */ import net.minecraft.resources.ResourceLocation;
+/*    */ import net.minecraft.world.entity.Entity;
+/*    */ import net.minecraft.world.entity.LivingEntity;
+/*    */ 
+/*    */ public class EvokerRenderer<T extends SpellcasterIllager> extends IllagerRenderer<T> {
+/* 12 */   private static final ResourceLocation EVOKER_ILLAGER = new ResourceLocation("textures/entity/illager/evoker.png");
+/*    */   
+/*    */   public EvokerRenderer(EntityRendererProvider.Context $$0) {
+/* 15 */     super($$0, new IllagerModel($$0.bakeLayer(ModelLayers.EVOKER)), 0.5F);
+/*    */     
+/* 17 */     addLayer((RenderLayer<T, IllagerModel<T>>)new ItemInHandLayer<T, IllagerModel<T>>(this, $$0.getItemInHandRenderer())
+/*    */         {
+/*    */           public void render(PoseStack $$0, MultiBufferSource $$1, int $$2, T $$3, float $$4, float $$5, float $$6, float $$7, float $$8, float $$9) {
+/* 20 */             if ($$3.isCastingSpell()) {
+/* 21 */               super.render($$0, $$1, $$2, (LivingEntity)$$3, $$4, $$5, $$6, $$7, $$8, $$9);
+/*    */             }
+/*    */           }
+/*    */         });
+/*    */   }
+/*    */ 
+/*    */   
+/*    */   public ResourceLocation getTextureLocation(T $$0) {
+/* 29 */     return EVOKER_ILLAGER;
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\Xiao\Downloads\output\client_deobfuscated.jar!\net\minecraft\client\renderer\entity\EvokerRenderer.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */

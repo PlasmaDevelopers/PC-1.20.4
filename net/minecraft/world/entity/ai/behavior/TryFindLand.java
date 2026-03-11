@@ -1,0 +1,34 @@
+/*    */ package net.minecraft.world.entity.ai.behavior;
+/*    */ import com.mojang.datafixers.kinds.App;
+/*    */ import com.mojang.datafixers.kinds.Applicative;
+/*    */ import net.minecraft.core.BlockPos;
+/*    */ import net.minecraft.core.Direction;
+/*    */ import net.minecraft.core.Vec3i;
+/*    */ import net.minecraft.server.level.ServerLevel;
+/*    */ import net.minecraft.world.entity.PathfinderMob;
+/*    */ import net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder;
+/*    */ import net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor;
+/*    */ import net.minecraft.world.entity.ai.behavior.declarative.Trigger;
+/*    */ import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+/*    */ import net.minecraft.world.entity.ai.memory.WalkTarget;
+/*    */ import net.minecraft.world.level.BlockGetter;
+/*    */ import net.minecraft.world.level.block.Blocks;
+/*    */ import net.minecraft.world.level.block.state.BlockState;
+/*    */ import net.minecraft.world.phys.shapes.CollisionContext;
+/*    */ import org.apache.commons.lang3.mutable.MutableLong;
+/*    */ 
+/*    */ public class TryFindLand {
+/*    */   public static BehaviorControl<PathfinderMob> create(int $$0, float $$1) {
+/* 22 */     MutableLong $$2 = new MutableLong(0L);
+/*    */     
+/* 24 */     return BehaviorBuilder.create($$3 -> $$3.group((App)$$3.absent(MemoryModuleType.ATTACK_TARGET), (App)$$3.absent(MemoryModuleType.WALK_TARGET), (App)$$3.registered(MemoryModuleType.LOOK_TARGET)).apply((Applicative)$$3, ()));
+/*    */   }
+/*    */   
+/*    */   private static final int COOLDOWN_TICKS = 60;
+/*    */ }
+
+
+/* Location:              C:\Users\Xiao\Downloads\output\client_deobfuscated.jar!\net\minecraft\world\entity\ai\behavior\TryFindLand.class
+ * Java compiler version: 17 (61.0)
+ * JD-Core Version:       1.1.3
+ */
